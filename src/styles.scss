@@ -1,0 +1,131 @@
+$search-width: 500px;
+$searchButton-width: 80px;
+$search-height: 40px;
+$searchButton-color: #1ac8ed;
+$searchBorder-color: #1ac8ed;
+
+$searchText-width: $search-width - $searchButton-width;
+
+//general
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.error {
+  position: absolute;
+  top: 60%;
+  color: red;
+}
+
+//home
+input {
+  padding: 0px;
+  font-size: 18px;
+  height: 100%;
+  background: white;
+  border: none;
+}
+
+.search {
+  font-size: 0; //!!!!!
+  @media (min-width: 768px) {
+    height: $search-height;
+    width: $search-width;
+  }
+}
+
+.search__bar {
+  text-indent: 5px;
+  border-radius: 5px 0 0 5px;
+  border: 2px solid $searchBorder-color;
+  border-right: none;
+  width: 80%;
+  height: 100%;
+  @media (min-width: 768px) {
+    width: $searchText-width;
+  }
+}
+
+.search__btn {
+  color: white;
+  background-color: $searchButton-color;
+  padding: 0 10px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  width: 20%;
+  @media (min-width: 768px) {
+    width: $searchButton-width;
+  }
+}
+
+//Details page
+.back-btn {
+  min-height: 2rem;
+  min-width: 2rem;
+  border-radius: 99999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0;
+  &:hover {
+    background-color: rgba(29, 161, 242, 0.1);
+    cursor: pointer;
+  }
+}
+.back-btn__icon {
+  color: #1ac8ed;
+  width: 1rem;
+  height: 1rem;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 0.5px solid $searchBorder-color;
+  padding: 0 16px;
+  border-radius: 8px;
+  height: 100%;
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+}
+.post__title {
+}
+
+.post__body {
+  border: none;
+  overflow: auto;
+  outline: none;
+  background: none;
+  padding: 0;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  overflow: hidden;
+  flex-grow: 1;
+  height: 100%;
+  resize: none;
+}
+
+.line-border {
+  padding: 16px 0px;
+  width: 100%;
+  border-top: 0.5px solid $searchBorder-color;
+}
