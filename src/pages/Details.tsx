@@ -20,7 +20,7 @@ const Details: React.FC<DetailsProps> = ({ changePage }) => {
           <ArrowIcon fill="#1ac8ed" className="back-btn__icon" />
         </div>
         <h2 className="post__title line-border">{post?.title}</h2>
-        <TextField contentEditable={false} className="post__body line-border">
+        <TextField contentEditable={false} readOnly={true} className="post__body line-border">
           {post?.body}
         </TextField>
       </div>
