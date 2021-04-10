@@ -23,7 +23,7 @@ const Home: React.FC<HomeProps> = ({ changePage }) => {
       <form className="search" onSubmit={handleSubmit}>
         <input
           ref={inputEl}
-          type="text"
+          type="number"
           className="search__bar"
           placeholder="Please Enter ID"
         />
